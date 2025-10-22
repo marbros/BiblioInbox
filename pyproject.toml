@@ -1,0 +1,34 @@
+[project]
+name = "biblioteca-mail"
+version = "0.1.0"
+description = "Gestión de reservas de biblioteca por email (FastAPI + IMAP/SMTP + LangChain opcional)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi==0.115.0",
+  "uvicorn[standard]==0.30.6",
+  "SQLAlchemy==2.0.35",
+  "pydantic==2.9.2",
+  "python-dotenv==1.0.1",
+  "IMAPClient==3.0.1",
+  "beautifulsoup4==4.12.3",
+  "email-validator==2.2.0",
+  "langchain==0.3.2",
+  "langchain-openai>=0.2.1",
+  "openai>=1.44.0",
+  "httpx>=0.27,<0.28"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+lint.select = ["E","F","I","UP","B","C4","SIM","W"]
+lint.ignore = ["E203","E501"]
+exclude = ["library.db"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.uv]

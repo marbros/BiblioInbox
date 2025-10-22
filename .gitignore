@@ -1,0 +1,5 @@
+.venv/
+.pytype/
+__pycache__/
+.env
+library.db
